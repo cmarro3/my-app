@@ -3,7 +3,8 @@ import './App.css';
 import Intro from './componets/intro/index'
 import 'whatwg-fetch';
 import { fetch } from 'whatwg-fetch';
-
+import Series from './containers/series/index'
+import SeriesList from './componets/intro/series/index'
 class App extends Component {
   state = {
     series:[]
@@ -14,7 +15,7 @@ class App extends Component {
     .then((response) => response.json())
     .then(json => this.setState({series:json}))
   }
-  
+
   render(){
   return (
     <div className="App">
@@ -22,7 +23,10 @@ class App extends Component {
         <h1 className="App-title"> Random Cat Facts</h1>
       </header>
      <Intro message = 'Here you can find facts about cats'/>
+    <SeriesList list = {this.state.series}/>
      the length of the series of cat facts is - {this.state.series.length}
+     <Series/>
+
     </div>
   );
  }
