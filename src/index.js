@@ -4,11 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+//Example of rendering a jsx element
+// const greeting = React.createElement('h1', {}, 'Hello world!')
+
+//jsx examples
+// const currentDate = () => {
+//   const date = new Date();
+//   return date.toDateString();
+// }
+
+// const greeting = <h1> hello world!! the date today is: {currentDate()} </h1>;
+
+ReactDOM.render(<App/>,document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
